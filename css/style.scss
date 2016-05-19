@@ -1,0 +1,223 @@
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Variables */
+
+$font: 'PT Serif', georgia, serif;
+$line-height: 1.5;
+
+/* Configuration */
+
+body {
+  background: #E5E5E5;
+}
+
+.fallback-message {
+  font-family: sans-serif;
+  line-height: 1.3;
+
+  width: 780px;
+  padding: 10px 10px 0;
+  margin: 20px auto;
+
+  border: 1px solid #E4C652;
+  border-radius: 10px;
+  background: #EEDC94;
+}
+
+.fallback-message p {
+  margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+  display: none;
+}
+
+.step {
+  position: relative;
+  width: 900px;
+  padding: 40px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  font-family: $font;
+  line-height: $line-height;
+}
+
+.impress-enabled {
+  .step {
+    margin: 0;
+    opacity: 0.2;
+    transition: opacity 1s;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+/* Style */
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.light {
+  color: lighten(black, 40);
+}
+
+.center {
+  text-align: center;
+}
+
+/* Layout */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slides */
+
+#title {
+  img {
+    animation-duration: 1s;
+  }
+}
+
+#flood {
+  .glass {
+    background: white;
+    width: 220px;
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    display: inline-block;
+
+    img {
+      height: 160px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all 1s ease-out;
+      transition-delay: 1s;
+    }
+  }
+
+  .water {
+    background-image: url('../assets/waves.png');
+    background-position: top right;
+    position: absolute;
+    bottom: 0;
+    width: 220px;
+    height: 0;
+    transition: all 3s ease-out;
+    transition-delay: 2s;
+    border-radius: 10px;
+  }
+
+  .emphasis {
+    transition: all 4s;
+  }
+
+  &.present {
+    .water {
+      height: 400px;
+      background-position: top left;
+    }
+    .glass img {
+      height: 45px;
+    }
+    .emphasis {
+      color: red;
+    }
+  }
+}
+
+#sea-ice {
+}
+
+#ice-chart1 {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+}
