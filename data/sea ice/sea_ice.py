@@ -2,7 +2,6 @@ import requests
 import json
 import csv
 from datetime import date, timedelta
-from collections import OrderedDict
 
 start = 1979
 end = 2015
@@ -39,9 +38,28 @@ def analyze(region):
         total = sum(doy['extent'] for doy in data)
         average = total / length
 
-        avg.append(OrderedDict({'year': year, 'extent': average}))
+        avg.append({'year': year, 'extent': average})
 
     return avg
+
+
+def anomalies(region):
+    print('Analyzing anomalies for {} data.'.format(region))
+
+    c = []
+
+    with open(db.format(region), 'r') as file:
+        dictionary = json.load(file)
+
+    for year in range(start, end + 1):
+        data = dictionary[str(year)]
+        data = [doy['extent'] for doy in data]
+        low = min(data)
+        high = max(data)
+
+        c.append({'year': year, 'min': low, 'max': high})
+
+    return c
 
 
 def coalesce(region):
@@ -60,15 +78,21 @@ def coalesce(region):
             extent = data['extent']
             current_date = start_date + timedelta(doy - 1)
 
-            c.append(OrderedDict({'date': current_date.isoformat(), 'extent': extent}))
+            c.append({'date': current_date.isoformat(), 'extent': extent})
 
     return c
 
 
-def write_csv(iterable, filename):
+def write_csv(iterable, filename, fieldnames=None):
     with open('{}.csv'.format(filename), 'w', newline='') as f:
-        fieldnames = list(iterable[0].keys())
+        if fieldnames is None:
+            fieldnames = list(iterable[0].keys())
+
         writer = csv.DictWriter(f, fieldnames)
 
         writer.writeheader()
         writer.writerows(iterable)
+
+
+data = anomalies('north')
+write_csv(data, 'north_anomalies', ['year', 'min', 'max'])
