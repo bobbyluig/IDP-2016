@@ -213,10 +213,16 @@ img {
 #flood.present .emphasis {
   color: red; }
 
-#projection .fa-sun-o {
+#projection [class*="t-"] {
   transition: color 1s; }
-#projection.present .fa-sun-o {
+#projection.present .t-orange {
   color: orange; }
+#projection.present .t-blue {
+  color: #7cb5ec; }
+#projection.present .t-green {
+  color: green; }
+#projection.present .t-red {
+  color: red; }
 
 #chart1 {
   width: 100%;

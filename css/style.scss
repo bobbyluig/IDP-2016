@@ -250,12 +250,21 @@ img {
 }
 
 #projection {
-  .fa-sun-o {
+  [class*="t-"] {
     transition: color 1s;
   }
   &.present {
-    .fa-sun-o {
+    .t-orange {
       color: orange;
+    }
+    .t-blue {
+      color: #7cb5ec;
+    }
+    .t-green {
+      color: green;
+    }
+    .t-red {
+      color: red;
     }
   }
 }
