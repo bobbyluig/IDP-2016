@@ -36,8 +36,8 @@ blockquote, q {
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
 	content: none;
+	content: '';
 }
 table {
 	border-collapse: collapse;
@@ -46,7 +46,7 @@ table {
 
 /* Variables */
 
-$font: 'PT Serif', georgia, serif;
+$font: 'Lato', georgia, serif;
 $line-height: 1.5;
 
 /* Configuration */
@@ -82,14 +82,14 @@ body {
   padding: 40px;
   margin: 20px auto;
   box-sizing: border-box;
-  font-family: $font;
+  font-family: 'Lato', sans-serif;
   line-height: $line-height;
 }
 
 .impress-enabled {
   .step {
     margin: 0;
-    opacity: 0.2;
+    opacity: 0;
     transition: opacity 1s;
 
     &.active {
@@ -120,8 +120,35 @@ p {
   color: lighten(black, 40);
 }
 
+.right {
+  text-align: right;
+}
+
 .center {
   text-align: center;
+}
+
+.statistic {
+  font-family: 'Lato', sans-serif;;
+
+  .label {
+    text-align: center;
+    line-height: 1;
+    color: lighten(black, 40);
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Colors */
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
 }
 
 /* Layout */
@@ -159,6 +186,15 @@ p {
 #title {
   img {
     animation-duration: 1s;
+  }
+}
+
+#quote {
+  blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #7cb5ec;
+    margin: 10px 0;
+    padding: 0.5em 10px;
   }
 }
 
@@ -213,10 +249,18 @@ p {
   }
 }
 
-#sea-ice {
+#projection {
+  .fa-sun-o {
+    transition: color 1s;
+  }
+  &.present {
+    .fa-sun-o {
+      color: orange;
+    }
+  }
 }
 
-#ice-chart1 {
+#chart1 {
   width: 100%;
   height: 600px;
   margin: 0 auto;

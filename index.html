@@ -10,6 +10,7 @@
     <meta name="description" content="Antarctica is doomed. A solution you ask? Should have asked a decade ago." />
     <meta name="author" content="Lujing Cen" />
 
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Lato' rel='stylesheet' type='text/css'>
     <link href="css/animate.min.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
@@ -23,27 +24,91 @@
 </div>
 
 <div id="impress">
-    <div id="title" class="step center" data-x="0" data-y="0" data-transition-duration="1000">
-        <h1>Arctic & Antarctica - R.I.P.</h1>
-        <h3>A real look into just how doomed humanity is.</h3>
-
+    <div id="title" class="step center" data-x="0" data-y="0">
+        <h1>Arctic & Antarctica</h1>
+        <h3>It's slowly degrading, but we have time to act.</h3>
         <img class="animated infinite pulse" src="assets/antarctica.svg">
-
-        <div class="light center col-6">
-            <p>Alero Arueyingho</p>
-            <p>Lujing Cen</p>
-            <p>Alastair MacMillan</p>
-            <p>Nicolas Obias</p>
-        </div>
-        <div class="light center col-6">
-            <p>Natachi Onwudiwe</p>
-            <p>Adam Oshan</p>
-            <p>Dino Rozac</p>
-            <p>Teresa Pho</p>
-        </div>
+        <h3 class="light">Presented by Lujing Cen and Natachi Onwudiwe</h3>
     </div>
 
-    <div id="flood" class="step flex-align" data-x="0" data-y="2000" data-transition-duration="1000">
+    <div id="quote" class="step" data-x="0" data-y="0" data-z="-500">
+        <blockquote>
+            <h3>"Sea ice surrounding Antarctica reached a new record high extent this year..."</h3>
+            <p class="light right">- NASA (2014)</p>
+        </blockquote>
+        <img src="assets/seaice.jpg">
+
+        <!--
+        http://www.nasa.gov/content/goddard/antarctic-sea-ice-reaches-new-record-maximum/
+        -->
+    </div>
+
+    <div id="sea-ice" class="step" data-x="0" data-y="0" data-z="-500" data-rotate-y="180">
+        <div id="chart1"></div>
+
+        <!--
+        http://nsidc.org/data/tools/arctic-sea-ice-chart/api/daily_extents.json?year=&&hemisphere=
+        -->
+    </div>
+
+    <div class="center step" data-x="0" data-y="0" data-z="-500" data-rotate-y="180" data-rotate-x="180">
+        <h1>Status Quo</h1>
+        <div class="statistic row center">
+            <div class="col-4">
+                <h1 class="green"><i class="fa fa-chevron-up" aria-hidden="true"></i> 0.0189</h1>
+                <p class="label">Antarctic Sea Ice (millions of km&sup2; / year)</p>
+            </div>
+            <div class="col-4">
+                <h1 class="red"><i class="fa fa-chevron-down" aria-hidden="true"></i> 0.0509</h1>
+                <p class="label">Arctic Sea Ice (millions of km&sup2; / year)</p>
+            </div>
+            <div class="col-4">
+                <h1 class="red"><i class="fa fa-chevron-up" aria-hidden="true"></i> 0.0484</h1>
+                <p class="label">Antarctic Ground Temperature (&deg;C / year)</p>
+            </div>
+        </div>
+
+        <div class="statistic row center">
+            <div class="col-4">
+                <h1 class="red"><i class="fa fa-chevron-up" aria-hidden="true"></i> 3.3791</h1>
+                <p class="label">Global Relative Mean Sea Level (mm / year)</p>
+            </div>
+            <div class="col-4">
+                <h1 class="red"><i class="fa fa-chevron-down" aria-hidden="true"></i> 133.94</h1>
+                <p class="label">Antarctic Ice Mass (GT / year)</p>
+            </div>
+            <div class="col-4">
+                <h1 class="red"><i class="fa fa-chevron-down" aria-hidden="true"></i> 287.62</h1>
+                <p class="label">Greenland Ice Mass (GT / year)</p>
+            </div>
+        </div>
+
+        <div class="statistic row center">
+            <div class="col-4">
+                <h1 class="red"><i class="fa fa-chevron-up" aria-hidden="true"></i> 1.8719</h1>
+                <p class="label">Carbon Dioxide Concentration (ppm / year)</p>
+            </div>
+            <div class="col-4">
+                <h1 class="red"><i class="fa fa-chevron-up" aria-hidden="true"></i> 0.0636</h1>
+                <p class="label">Antarctic Ocean Temperature (&deg;C / year)</p>
+            </div>
+            <div class="col-4">
+                <h1 class="red"><i class="fa fa-chevron-up" aria-hidden="true"></i> 0.0924</h1>
+                <p class="label">Arctic Ocean Temperature (&deg;C / year)</p>
+            </div>
+        </div>
+
+        <!--
+        http://nsidc.org/data/tools/arctic-sea-ice-chart/api/daily_extents.json?year=&&hemisphere=
+        http://www.aari.aq/default_en.html
+        http://sealevel.colorado.edu/
+        http://climate.nasa.gov/vital-signs/land-ice
+        http://neo.sci.gsfc.nasa.gov/
+        http://www.esrl.noaa.gov/gmd/ccgg/trends/
+        -->
+    </div>
+
+    <div id="flood" class="step flex-align" data-x="0" data-y="2000">
         <div class="center col-4">
             <div class="glass">
                 <div class="water"></div>
@@ -55,7 +120,7 @@
                 <span class="emphasis">58.3</span> meters,
                 covering more than
                 <span class="emphasis">8x</span>
-                the height a regular 2-story building.</h2>
+                the height of a regular 2-story building.</h2>
         </div>
 
         <!--
@@ -64,17 +129,17 @@
         -->
     </div>
 
-    <div id="sea-ice" class="step" data-x="0" data-y="4000">
-        <div id="ice-chart1"></div>
+    <div id="projection" class="center step">
+        <h1>Pessimistic Projection</h1>
+        <br>
+        <h3><i class="fa fa-sun-o" aria-hidden="true"></i> Ground Temperature: -54.07&deg;C <i class="fa fa-long-arrow-right" aria-hidden="true"></i> -50.00 &deg;C</h3>
     </div>
-
 </div>
 
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="js/easing.js"></script>
 <script src="js/impress.js"></script>
 <script src="js/highcharts.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/idp.js"></script>
 </body>
 </html>
