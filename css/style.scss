@@ -116,6 +116,10 @@ p {
   font-size: 20px;
 }
 
+.huge {
+  font-size: 600px;
+}
+
 .light {
   color: lighten(black, 40);
 }
@@ -265,6 +269,18 @@ img {
     }
     .t-red {
       color: red;
+    }
+  }
+}
+
+#emotional {
+  img {
+    transition: transform 3s ease-in-out;
+  }
+
+  &.present {
+    img {
+      transform: scale(1.4);
     }
   }
 }

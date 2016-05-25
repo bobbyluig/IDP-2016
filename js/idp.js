@@ -99,3 +99,7 @@ $('#sea-ice').on('impress:stepenter', function () {
     chart1.addSeries(series);
 
 });
+
+$('#question').on('impress:stepenter', function () {
+    $(this).find('i').animateCss('tada');
+});

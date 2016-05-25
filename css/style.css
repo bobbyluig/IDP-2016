@@ -92,6 +92,9 @@ h3 {
 p {
   font-size: 20px; }
 
+.huge {
+  font-size: 600px; }
+
 .light {
   color: #666666; }
 
@@ -223,6 +226,11 @@ img {
   color: green; }
 #projection.present .t-red {
   color: red; }
+
+#emotional img {
+  transition: transform 3s ease-in-out; }
+#emotional.present img {
+  transform: scale(1.4); }
 
 #chart1 {
   width: 100%;

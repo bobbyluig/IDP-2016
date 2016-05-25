@@ -26,7 +26,7 @@
 <div id="impress">
     <div id="title" class="step center" data-x="0" data-y="0">
         <h1>Arctic & Antarctica</h1>
-        <h3>It's slowly degrading, but we have time to act.</h3>
+        <h3>It's slowly degrading, but you have time to act.</h3>
         <img class="animated infinite pulse" src="assets/antarctica.svg">
         <h3 class="light">Presented by Lujing Cen and Natachi Onwudiwe</h3>
     </div>
@@ -108,7 +108,7 @@
         -->
     </div>
 
-    <div id="flood" class="step flex-align" data-x="0" data-y="2000">
+    <div id="flood" class="step flex-align" data-x="0" data-y="0" data-z="500" data-rotate-y="180" data-rotate-x="180">
         <div class="center col-4">
             <div class="glass">
                 <div class="water"></div>
@@ -129,7 +129,7 @@
         -->
     </div>
 
-    <div id="projection" class="center step">
+    <div id="projection" class="center step" data-x="0" data-y="2000">
         <h1>Linear Projections (2100)</h1>
         <br>
         <h3>Arctic Sea Ice: 10.54 millions of km&sup2; <i class="fa fa-long-arrow-right t-blue" aria-hidden="true"></i> 6.27 millions of km&sup2;</h3>
@@ -140,12 +140,100 @@
         <hr>
         <h3>Arctic Ocean Temperature: 7.39 &deg;C <i class="fa fa-long-arrow-right t-red" aria-hidden="true"></i> 15.15 &deg;C</h3>
     </div>
-</div>
 
-<script src="js/jquery-2.2.3.min.js"></script>
-<script src="js/easing.js"></script>
-<script src="js/impress.js"></script>
-<script src="js/highcharts.js"></script>
-<script src="js/idp.js"></script>
+    <div id="mimas" class="center step" data-x="0" data-y="2000" data-rotate-x="90">
+        <img src="assets/mimas.jpg">
+    </div>
+
+    <div id="biosphere" class="center step" data-x="0" data-y="2000" data-rotate-x="90" data-rotate-y="180">
+        <h1>Affected Biosphere</h1>
+        <br>
+        <div class="center col-4">
+            <h3>Phytoplankton</h3>
+            <br>
+            <img src="assets/phytoplankton.png">
+            <br><br>
+            <img src="assets/plankton1.png">
+        </div>
+        <div class="center col-4">
+            <h3>Krills</h3>
+            <br>
+            <img src="assets/krills.png">
+            <br><br>
+            <img src="assets/krill1.png">
+        </div>
+        <div class="center col-4">
+            <h3>Penguins</h3>
+            <br>
+            <img src="assets/penguin.png">
+        </div>
+    </div>
+
+    <div id="change" class="center step" data-x="0" data-y="2000">
+        <h1>Driving Change</h1>
+        <br>
+        <img src="assets/farm.png">
+    </div>
+
+    <div id="mitigation" class="center step">
+        <img src="assets/better.jpg" width="900" style="position: relative; z-index: 0;">
+        <div style="position: absolute; top: 200px; left: 0; right: 0;">
+            <h1>Maximum Mitigation</h1>
+            <br>
+            <h3>Prevention <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Reduction <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Collaboration </h3>
+        </div>
+    </div>
+
+    <div id="good" class="center step" data-x="0" data-y="2000" data-rotate-z="90">
+        <h1>Climate Change Mitigated (2100)</h1>
+        <div class="statistic row center">
+            <div class="col-6">
+                <h1 class="green"><i class="fa fa-minus" aria-hidden="true"></i> 58.12</h1>
+                <p class="label">Antarctic Ground Temperature (&deg;C)</p>
+            </div>
+            <div class="col-6">
+                <h1 class="green"><i class="fa fa-minus" aria-hidden="true"></i> 1.6</h1>
+                <p class="label">Antarctic Ocean Temperature (&deg;C)</p>
+            </div>
+        </div>
+
+        <div class="statistic row center">
+            <div class="col-6">
+                <h1 class="green"><i class="fa fa-minus" aria-hidden="true"></i> 0.129</h1>
+                <p class="label">Relative Ocean Level (m)</p>
+            </div>
+            <div class="col-6">
+                <h1 class="green"><i class="fa fa-plus" aria-hidden="true"></i> 6000</h1>
+                <p class="label">Total Ice Gain (GT)</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="question" class="center step" data-x="0" data-y="2000" data-rotate-z="90" data-rotate-x="180">
+        <i class="fa fa-question huge" aria-hidden="true"></i>
+    </div>
+
+    <div id="emotional" class="center step">
+        <img src="assets/emotional.jpg">
+    </div>
+
+    <div id="workcited" class="center step" data-z="-1000">
+        <h1>Works Cited</h1>
+        <br>
+        <p>Antarctic Sea Ice Reaches New Record Maximum (NASA)</p>
+        <p>CU Sea Level Research Group</p>
+        <p>Earth System Research Laboratory Global Monitoring Division</p>
+        <p>Federal Program "World Ocean" Arctic Research and Investigation</p>
+        <p>IPCC AR5 (Vaughan et al, 2013)</p>
+        <p>NASA Earth Observations</p>
+        <p>National Snow & Ice Data Center</p>
+
+    </div>
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/impress.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/idp.js"></script>
 </body>
 </html>
